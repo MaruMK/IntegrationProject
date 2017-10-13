@@ -12,6 +12,7 @@ namespace IntegrationProjectNMGM.Controllers
         public ActionResult Index()
         {
             int test = 1;
+            string test2 = "Gabriel Chadlebois is here";
             return View();
         }
 
