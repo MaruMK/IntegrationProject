@@ -13,6 +13,7 @@ namespace IntegrationProjectNMGM.Controllers
         {
             int test = 1;
             string test2 = "Gabriel Chadlebois is here, again! But this time in private...";
+            int nathanTest = 0;
             return View();
         }
 
