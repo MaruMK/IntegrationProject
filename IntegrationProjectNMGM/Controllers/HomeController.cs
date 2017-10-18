@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -14,6 +15,8 @@ namespace IntegrationProjectNMGM.Controllers
             int test = 1;
             string test2 = "Gabriel Chadlebois is here, again! But this time in private...";
             int nathanTest = 0;
+
+
             return View();
         }
 
