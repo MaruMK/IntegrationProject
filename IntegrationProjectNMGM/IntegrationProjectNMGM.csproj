@@ -177,9 +177,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Views\Images\bikeshop.jpg" />
-    <Content Include="Views\Images\bikeshopowners.jpg" />
-    <Content Include="Views\Images\bikeshopworker.jpg" />
+    <Content Include="Content\Images\bikeshop.jpg" />
+    <Content Include="Content\Images\bikeshopowners.jpg" />
+    <Content Include="Content\Images\bikeshopworker.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
