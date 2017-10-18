@@ -30,5 +30,17 @@ namespace IntegrationProjectNMGM.Controllers
 
             return View();
         }
+
+        public ActionResult CyclingSafety()
+        {
+            ViewBag.Message = "Cycling Safety";
+            return View();
+        }
+
+        public ActionResult Careers()
+        {
+            ViewBag.Message = "Work for us!";
+            return View();
+        }
     }
 }
