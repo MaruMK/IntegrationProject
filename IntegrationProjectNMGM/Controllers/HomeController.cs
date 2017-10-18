@@ -30,5 +30,12 @@ namespace IntegrationProjectNMGM.Controllers
 
             return View();
         }
+
+        public ActionResult Returns()
+        {
+            ViewBag.Message = "Our return policy:";
+
+            return View();
+        }
     }
 }
