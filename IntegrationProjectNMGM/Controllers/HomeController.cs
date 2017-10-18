@@ -34,6 +34,13 @@ namespace IntegrationProjectNMGM.Controllers
             return View();
         }
 
+
+        public ActionResult Returns()
+        {
+            ViewBag.Message = "Our return policy:";
+            return View();
+        }
+        
         public ActionResult CyclingSafety()
         {
             ViewBag.Message = "Cycling Safety";
@@ -43,7 +50,7 @@ namespace IntegrationProjectNMGM.Controllers
         public ActionResult Careers()
         {
             ViewBag.Message = "Work for us!";
-            return View();
+            return View();    
         }
     }
 }
