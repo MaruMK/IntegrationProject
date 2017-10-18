@@ -1,4 +1,30 @@
-﻿@{
+﻿<link rel="stylesheet" type="text/css" href="../../Content/Contact.css">
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAgTP1XBFB3oifJsY1PNUpLTncbDWnMcA&callback=initMap" type="text/javascript"></script>
+<script type="text/javascript">
+    function initMap() {
+        var latlng = new google.maps.LatLng(45.4053736, -73.9417891);
+
+        var myOptions = {
+            zoom: 17,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+        var marker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            title: 'marker'
+        });
+
+       
+    }
+    window.onload = initMap;
+</script>
+
+@{
     ViewBag.Title = "Contact Us";
 }
 <h2>@ViewBag.Title</h2>
@@ -45,3 +71,5 @@
     <strong>Store Owner: </strong> <a href:"first.last@company.ca">first.last@company.ca</a><br />
     <strong>Company: </strong> <a href:"email@company.ca">email@company.ca</a><br />
 </address>
+
+<div id="map" style="="wid></div>
