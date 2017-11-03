@@ -152,6 +152,30 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711031647063_InitialCreate.cs" />
+    <Compile Include="Migrations\201711031647063_InitialCreate.Designer.cs">
+      <DependentUpon>201711031647063_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711031649070_ProductAddProductName.cs" />
+    <Compile Include="Migrations\201711031649070_ProductAddProductName.Designer.cs">
+      <DependentUpon>201711031649070_ProductAddProductName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711031749550_ModelDesignChange.cs" />
+    <Compile Include="Migrations\201711031749550_ModelDesignChange.Designer.cs">
+      <DependentUpon>201711031749550_ModelDesignChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711031801258_ModelDesignChange1.2.cs" />
+    <Compile Include="Migrations\201711031801258_ModelDesignChange1.2.Designer.cs">
+      <DependentUpon>201711031801258_ModelDesignChange1.2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Color.cs" />
+    <Compile Include="Models\DAL.cs" />
+    <Compile Include="Models\Image.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductCategories.cs" />
+    <Compile Include="Models\Review.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -198,11 +222,11 @@
     <Content Include="Views\Home\Returns.cshtml" />
     <Content Include="Views\Home\CyclingSafety.cshtml" />
     <Content Include="Views\Home\Careers.cshtml" />
+    <Content Include="Views\DummyTemplates\Product.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Assets\images\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -218,6 +242,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201711031647063_InitialCreate.resx">
+      <DependentUpon>201711031647063_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711031649070_ProductAddProductName.resx">
+      <DependentUpon>201711031649070_ProductAddProductName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711031749550_ModelDesignChange.resx">
+      <DependentUpon>201711031749550_ModelDesignChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711031801258_ModelDesignChange1.2.resx">
+      <DependentUpon>201711031801258_ModelDesignChange1.2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
