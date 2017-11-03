@@ -52,5 +52,11 @@ namespace IntegrationProjectNMGM.Controllers
             ViewBag.Message = "Work for us!";
             return View();    
         }
+
+        public ActionResult dummy()
+        {
+            return View();
+        }
+
     }
 }
