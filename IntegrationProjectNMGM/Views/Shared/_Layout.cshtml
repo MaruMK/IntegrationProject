@@ -45,15 +45,15 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year 
-            <!--
-                Do the footer here!!!
-                
-                
-                
-                -->
-            footer eaxmple
-            </p>
+            <b>Menu Items</b><br />
+            <ul class="footer links">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                <li>@Html.ActionLink("Cycling Safety", "CyclingSafety", "Home")</li>
+                <li>@Html.ActionLink("Careers", "Careers", "Home")</li>
+                <li>@Html.ActionLink("Returns", "Returns", "Home")</li>
+            </ul>
         </footer>
     </div>
 

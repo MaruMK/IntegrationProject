@@ -198,6 +198,7 @@
     <Content Include="Views\Home\Returns.cshtml" />
     <Content Include="Views\Home\CyclingSafety.cshtml" />
     <Content Include="Views\Home\Careers.cshtml" />
+    <Content Include="Views\Shared\Review.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
