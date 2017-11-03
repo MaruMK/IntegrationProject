@@ -20,6 +20,11 @@ namespace IntegrationProjectNMGM.Controllers
             return View();
         }
 
+        public ActionResult Store()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
