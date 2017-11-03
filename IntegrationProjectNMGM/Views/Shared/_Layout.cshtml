@@ -2,7 +2,16 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="bike, bikes, bicycle, bicycles,
+                                   helmet, equipment, suit, gear, accessories,
+                                   tires, chamber, frame, seat, pedals,  
+                                   buy, shop, online, store, sale, discount, cheap,
+          
+                                   velo, velos, bicyclette, bicyclettes,
+                                   casques, equipement, combinaisons, materiel, accessoires,
+                                   pneus, chambres a air, cadre, sieges, pedales,  
+                                   acheter, boutique, en ligne, magasin, ventes, rabais, pas cher" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -36,15 +45,15 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year 
-            <!--
-                Do the footer here!!!
-                
-                
-                
-                -->
-            footer eaxmple
-            </p>
+            <b>Menu Items</b><br />
+            <ul class="footer links">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                <li>@Html.ActionLink("Cycling Safety", "CyclingSafety", "Home")</li>
+                <li>@Html.ActionLink("Careers", "Careers", "Home")</li>
+                <li>@Html.ActionLink("Returns", "Returns", "Home")</li>
+            </ul>
         </footer>
     </div>
 
