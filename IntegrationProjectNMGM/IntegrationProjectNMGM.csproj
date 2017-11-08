@@ -170,6 +170,10 @@
     <Compile Include="Migrations\201711031801258_ModelDesignChange1.2.Designer.cs">
       <DependentUpon>201711031801258_ModelDesignChange1.2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711081832443_AddProductIdToImageAndReview.cs" />
+    <Compile Include="Migrations\201711081832443_AddProductIdToImageAndReview.Designer.cs">
+      <DependentUpon>201711081832443_AddProductIdToImageAndReview.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Color.cs" />
@@ -311,6 +315,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Assets\images\" />
+    <Folder Include="Models\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -339,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711031801258_ModelDesignChange1.2.resx">
       <DependentUpon>201711031801258_ModelDesignChange1.2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711081832443_AddProductIdToImageAndReview.resx">
+      <DependentUpon>201711081832443_AddProductIdToImageAndReview.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
