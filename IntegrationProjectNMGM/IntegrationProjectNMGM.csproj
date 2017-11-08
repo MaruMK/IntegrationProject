@@ -170,6 +170,18 @@
     <Compile Include="Migrations\201711031801258_ModelDesignChange1.2.Designer.cs">
       <DependentUpon>201711031801258_ModelDesignChange1.2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711081853205_UserInitialCreate.cs" />
+    <Compile Include="Migrations\201711081853205_UserInitialCreate.Designer.cs">
+      <DependentUpon>201711081853205_UserInitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711081854570_UserAddEmail.cs" />
+    <Compile Include="Migrations\201711081854570_UserAddEmail.Designer.cs">
+      <DependentUpon>201711081854570_UserAddEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711081919193_AddUsersTableToDb.cs" />
+    <Compile Include="Migrations\201711081919193_AddUsersTableToDb.Designer.cs">
+      <DependentUpon>201711081919193_AddUsersTableToDb.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Color.cs" />
@@ -182,9 +194,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\IntegrationProjectNMGM.Models.UsersDbContext.mdf" />
-    <Content Include="App_Data\IntegrationProjectNMGM.Models.UsersDbContext_log.ldf">
-      <DependentUpon>IntegrationProjectNMGM.Models.UsersDbContext.mdf</DependentUpon>
+    <Content Include="App_Data\IntegrationProjectNMGM.Models.ProductDbContext.mdf" />
+    <Content Include="App_Data\IntegrationProjectNMGM.Models.ProductDbContext_log.ldf">
+      <DependentUpon>IntegrationProjectNMGM.Models.ProductDbContext.mdf</DependentUpon>
     </Content>
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\Antlr3.Runtime.pdb" />
@@ -301,16 +313,18 @@
     <Content Include="Views\Home\Store.cshtml" />
     <Content Include="Views\Home\dummy.cshtml" />
     <Content Include="Views\DummyTemplates\Product.cshtml" />
-    <Content Include="Views\Users\Create.cshtml" />
-    <Content Include="Views\Users\Delete.cshtml" />
-    <Content Include="Views\Users\Details.cshtml" />
-    <Content Include="Views\Users\Edit.cshtml" />
-    <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Products\Create.cshtml" />
     <Content Include="Views\Products\Delete.cshtml" />
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Users\Password.cshtml" />
+    <Content Include="Views\Users\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\images\" />
@@ -342,6 +356,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711031801258_ModelDesignChange1.2.resx">
       <DependentUpon>201711031801258_ModelDesignChange1.2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711081853205_UserInitialCreate.resx">
+      <DependentUpon>201711081853205_UserInitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711081854570_UserAddEmail.resx">
+      <DependentUpon>201711081854570_UserAddEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711081919193_AddUsersTableToDb.resx">
+      <DependentUpon>201711081919193_AddUsersTableToDb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
