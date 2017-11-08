@@ -8,7 +8,6 @@ namespace IntegrationProjectNMGM.Migrations
         public override void Up()
         {
             AddPrimaryKey("dbo.ProductCategories", new[] { "ProductId", "CategoryId" });
-            DropColumn("dbo.ProductCategories", "ProductCategoryId");
         }
         
         public override void Down()
