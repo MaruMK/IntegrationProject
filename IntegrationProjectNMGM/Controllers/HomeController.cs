@@ -20,11 +20,6 @@ namespace IntegrationProjectNMGM.Controllers
             return View();
         }
 
-        public ActionResult Store()
-        {
-            return View();
-        }
-
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -57,5 +52,11 @@ namespace IntegrationProjectNMGM.Controllers
             ViewBag.Message = "Work for us!";
             return View();    
         }
+
+        public ActionResult dummy()
+        {
+            return View();
+        }
+
     }
 }
