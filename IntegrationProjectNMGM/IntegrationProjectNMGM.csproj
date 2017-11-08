@@ -170,6 +170,10 @@
     <Compile Include="Migrations\201711031801258_ModelDesignChange1.2.Designer.cs">
       <DependentUpon>201711031801258_ModelDesignChange1.2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711081832443_AddProductIdToImageAndReview.cs" />
+    <Compile Include="Migrations\201711081832443_AddProductIdToImageAndReview.Designer.cs">
+      <DependentUpon>201711081832443_AddProductIdToImageAndReview.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201711081853205_UserInitialCreate.cs" />
     <Compile Include="Migrations\201711081853205_UserInitialCreate.Designer.cs">
       <DependentUpon>201711081853205_UserInitialCreate.cs</DependentUpon>
@@ -259,10 +263,12 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Contact.css" />
+    <Content Include="Content\Images\bikesignals.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Images\sampleBike.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -325,8 +331,15 @@
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Users\Password.cshtml" />
     <Content Include="Views\Users\Login.cshtml" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Products\Review.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Assets\images\" />
   </ItemGroup>
   <ItemGroup>
@@ -365,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711081919193_AddUsersTableToDb.resx">
       <DependentUpon>201711081919193_AddUsersTableToDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711081832443_AddProductIdToImageAndReview.resx">
+      <DependentUpon>201711081832443_AddProductIdToImageAndReview.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -18,7 +18,7 @@ namespace IntegrationProjectNMGM.Models
 
         public virtual ICollection<Image> Images { get; set; }
         public virtual ICollection<Color> Colors { get; set; }
-        public virtual ICollection<Review> Reveiws { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
 
         public virtual ICollection<ProductCategories> ProductCategories { get; set; }
     }

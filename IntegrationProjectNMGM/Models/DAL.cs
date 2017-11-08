@@ -13,6 +13,6 @@ namespace IntegrationProjectNMGM.Models
         public DbSet<ProductCategories> ProductCategories { get; set; }
         public DbSet<Image> Images { get; set; }
         public DbSet<Color> Colors { get; set; }
-        public DbSet<User> Users { get; set; }
+        public DbSet<Review> Reviews { get; set; }
     }
 }
