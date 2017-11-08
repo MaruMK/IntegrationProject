@@ -182,10 +182,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\IntegrationProjectNMGM.Models.UsersDbContext.mdf" />
-    <Content Include="App_Data\IntegrationProjectNMGM.Models.UsersDbContext_log.ldf">
-      <DependentUpon>IntegrationProjectNMGM.Models.UsersDbContext.mdf</DependentUpon>
-    </Content>
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\Antlr3.Runtime.pdb" />
     <Content Include="bin\EntityFramework.dll" />
@@ -313,6 +309,7 @@
     <Content Include="Views\Products\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Assets\images\" />
   </ItemGroup>
   <ItemGroup>
