@@ -32,6 +32,9 @@ namespace IntegrationProjectNMGM.Controllers
             {
                 return HttpNotFound();
             }
+             List<Review> reviews = new List<Review>();
+
+
             return View(product);
         }
 
@@ -57,6 +60,16 @@ namespace IntegrationProjectNMGM.Controllers
 
             return View(product);
         }
+
+        // GET: Products/Create
+        public ActionResult Review(int? id)
+        {
+            if (id == null)
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            return View();
+        }
+
+
 
         // GET: Products/Edit/5
         public ActionResult Edit(int? id)
