@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using IntegrationProjectNMGM.Models;
+using System.IO;
 
 namespace IntegrationProjectNMGM.Controllers
 {
@@ -56,11 +57,28 @@ namespace IntegrationProjectNMGM.Controllers
         }
 
         // GET: Products/Create
-        public ActionResult Create()
+        public ActionResult Create(HttpPostedFileBase file)
         {
+            if (file != null && file.ContentLength > 0)
+                try
+                {
+                    string path = Path.Combine(Server.MapPath("~/Models/Images"),
+                                                Path.GetFileName(file.FileName));
+                    file.SaveAs(path);
+                    ViewBag.Messsage = "File uploaded successfully";
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.Message = "Error: " + ex.Message.ToString();
+                }
+            else
+            {
+                ViewBag.Message = "You have not specified a file.";
+            }
             return View();
         }
-
+            
+        
         // POST: Products/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
