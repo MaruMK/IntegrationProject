@@ -10,6 +10,17 @@ namespace IntegrationProjectNMGM.Controllers
 {
     public class HomeController : Controller
     {
+
+        /// <summary>
+        /// This will contain localised string value
+        /// </summary>
+        public string LocalisedString { get; set; }
+
+        /// <summary>
+        /// For see difference of cretion time
+        /// </summary>
+        public DateTime CreationDateTime { get; set; }
+
         public ActionResult Index()
         {
             int test = 1;

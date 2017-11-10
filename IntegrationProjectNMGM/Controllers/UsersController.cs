@@ -12,7 +12,7 @@ namespace IntegrationProjectNMGM.Controllers
 {
     public class UsersController : Controller
     {
-        private UsersDbContext db = new UsersDbContext();
+        private ProductDbContext db = new ProductDbContext();
 
         // GET: Users
         public ActionResult Index()
@@ -46,7 +46,7 @@ namespace IntegrationProjectNMGM.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserID,Username,FName,LName,Password")] User user)
+        public ActionResult Create([Bind(Include = "UserID,Username,FName,LName,Password,Email")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace IntegrationProjectNMGM.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserID,Username,FName,LName,Password")] User user)
+        public ActionResult Edit([Bind(Include = "UserID,Username,FName,LName,Password,Email")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -139,15 +139,15 @@ namespace IntegrationProjectNMGM.Controllers
             string userName = user.Username;
             string passWord = user.Password;
 
-            var query = from User in db.Users
+            /*var query = from User in db.Users
                         where User.Username == userName
                               && User.Password == passWord
-                        select User;
-
-            return RedirectToAction("Index");
+                        select User;*/
+            System.Diagnostics.Debug.WriteLine(user.Username);            //return RedirectToAction("Index");
 
             return View(user);
         }
         //=========================================================================================================
+
     }
 }

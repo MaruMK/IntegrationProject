@@ -28,14 +28,31 @@ namespace IntegrationProjectNMGM.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Product product = db.Products.Find(id);
+            List<Review> reviews = new List<Review>();
+            var r = db.Reviews.Where(s => s.ProductId == id);
+            foreach (Review re in r)
+            {
+                reviews.Add(re);
+            }
+            List<Image> images = new List<Image>();
+            var i = db.Images.Where(y => y.ProductId == id);
+            foreach (Image im in i)
+            {
+                images.Add(im);
+            }
+
+            ProductDetails productDetails = new ProductDetails()
+            {
+                CurrentProduct = product,
+                Reviews = reviews,
+                Images = images
+            };
             if (product == null)
             {
                 return HttpNotFound();
             }
-             List<Review> reviews = new List<Review>();
 
-
-            return View(product);
+            return View(productDetails);
         }
 
         // GET: Products/Create
@@ -54,6 +71,7 @@ namespace IntegrationProjectNMGM.Controllers
             if (ModelState.IsValid)
             {
                 db.Products.Add(product);
+
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

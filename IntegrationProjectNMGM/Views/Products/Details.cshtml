@@ -1,4 +1,7 @@
-﻿@model IntegrationProjectNMGM.Models.Product
+﻿@model IntegrationProjectNMGM.Models.ProductDetails
+<!--The controller passes a ProductDetails object which stores the current Product, all its images and all its reviews.-->
+<!--So to access Images, you would do model=> model.Images-->-->
+
 
 @{
     ViewBag.Title = "Details";
@@ -11,53 +14,50 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.ProductName)
+            @Html.DisplayNameFor(model => model.CurrentProduct.ProductName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ProductName)
+            @Html.DisplayFor(model => model.CurrentProduct.ProductName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayNameFor(model => model.CurrentProduct.Description)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Description)
+            @Html.DisplayFor(model => model.CurrentProduct.Description)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.MSRP)
+            @Html.DisplayNameFor(model => model.CurrentProduct.MSRP)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.MSRP)
+            @Html.DisplayFor(model => model.CurrentProduct.MSRP)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.CurrentPrice)
+            @Html.DisplayNameFor(model => model.CurrentProduct.CurrentPrice)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CurrentPrice)
+            @Html.DisplayFor(model => model.CurrentProduct.CurrentPrice)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Enabled)
+            @Html.DisplayNameFor(model => model.CurrentProduct.Enabled)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Enabled)
+            @Html.DisplayFor(model => model.CurrentProduct.Enabled)
         </dd>
+
+        
 
     </dl>
 </div>
 <p>
-   
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductId })
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CurrentProduct.ProductId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
-<div>
-
-    @Html.Partial("~/Views/Shared/Review.cshtml")
-</div>

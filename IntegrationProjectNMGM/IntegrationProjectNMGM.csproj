@@ -170,15 +170,40 @@
     <Compile Include="Migrations\201711031801258_ModelDesignChange1.2.Designer.cs">
       <DependentUpon>201711031801258_ModelDesignChange1.2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711081832443_AddProductIdToImageAndReview.cs" />
+    <Compile Include="Migrations\201711081832443_AddProductIdToImageAndReview.Designer.cs">
+      <DependentUpon>201711081832443_AddProductIdToImageAndReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711081853205_UserInitialCreate.cs" />
+    <Compile Include="Migrations\201711081853205_UserInitialCreate.Designer.cs">
+      <DependentUpon>201711081853205_UserInitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711081854570_UserAddEmail.cs" />
+    <Compile Include="Migrations\201711081854570_UserAddEmail.Designer.cs">
+      <DependentUpon>201711081854570_UserAddEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711081919193_AddUsersTableToDb.cs" />
+    <Compile Include="Migrations\201711081919193_AddUsersTableToDb.Designer.cs">
+      <DependentUpon>201711081919193_AddUsersTableToDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711101721470_SomeUnknownChange.cs" />
+    <Compile Include="Migrations\201711101721470_SomeUnknownChange.Designer.cs">
+      <DependentUpon>201711101721470_SomeUnknownChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711101727506_ColorAddProductFields.cs" />
+    <Compile Include="Migrations\201711101727506_ColorAddProductFields.Designer.cs">
+      <DependentUpon>201711101727506_ColorAddProductFields.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\ProductDetails.cs" />
     <Compile Include="Models\Color.cs" />
     <Compile Include="Models\DAL.cs" />
     <Compile Include="Models\Image.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductCategories.cs" />
     <Compile Include="Models\Review.cs" />
-    <Compile Include="Models\UserModels.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -248,6 +273,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Images\sampleBike.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -277,14 +303,18 @@
     <Content Include="Content\Images\bikeshop.jpg" />
     <Content Include="Content\Images\bikeshopowners.jpg" />
     <Content Include="Content\Images\bikeshopworker.jpg" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -298,11 +328,17 @@
     <Content Include="Views\Home\Store.cshtml" />
     <Content Include="Views\Home\dummy.cshtml" />
     <Content Include="Views\DummyTemplates\Product.cshtml" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Users\Create.cshtml" />
     <Content Include="Views\Users\Delete.cshtml" />
     <Content Include="Views\Users\Details.cshtml" />
     <Content Include="Views\Users\Edit.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Users\Password.cshtml" />
+    <Content Include="Views\Users\Login.cshtml" />
     <Content Include="Views\Products\Create.cshtml" />
     <Content Include="Views\Products\Delete.cshtml" />
     <Content Include="Views\Products\Details.cshtml" />
@@ -311,7 +347,6 @@
     <Content Include="Views\Products\Review.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Assets\images\" />
   </ItemGroup>
   <ItemGroup>
@@ -341,6 +376,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711031801258_ModelDesignChange1.2.resx">
       <DependentUpon>201711031801258_ModelDesignChange1.2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711081853205_UserInitialCreate.resx">
+      <DependentUpon>201711081853205_UserInitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711081854570_UserAddEmail.resx">
+      <DependentUpon>201711081854570_UserAddEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711081919193_AddUsersTableToDb.resx">
+      <DependentUpon>201711081919193_AddUsersTableToDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711081832443_AddProductIdToImageAndReview.resx">
+      <DependentUpon>201711081832443_AddProductIdToImageAndReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711101721470_SomeUnknownChange.resx">
+      <DependentUpon>201711101721470_SomeUnknownChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711101727506_ColorAddProductFields.resx">
+      <DependentUpon>201711101727506_ColorAddProductFields.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
