@@ -188,7 +188,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\ProductAndReviews.cs" />
+    <Compile Include="Models\ProductDetails.cs" />
     <Compile Include="Models\Color.cs" />
     <Compile Include="Models\DAL.cs" />
     <Compile Include="Models\Image.cs" />
@@ -340,7 +340,6 @@
     <Content Include="Views\Products\Review.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Assets\images\" />
   </ItemGroup>
   <ItemGroup>
