@@ -28,9 +28,19 @@ namespace IntegrationProjectNMGM.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Product product = db.Products.Find(id);
-            List<Review> reviews = (List<Review>) db.Reviews.Where(s => s.ProductId == id);
-            List<Image> images = (List<Image>)db.Images.Where(i => i.ProductId == id);
- 
+            List<Review> reviews = new List<Review>();
+            var r = db.Reviews.Where(s => s.ProductId == id);
+            foreach (Review re in r)
+            {
+                reviews.Add(re);
+            }
+            List<Image> images = new List<Image>();
+            var i = db.Images.Where(y => y.ProductId == id);
+            foreach (Image im in i)
+            {
+                images.Add(im);
+            }
+
             ProductDetails productDetails = new ProductDetails()
             {
                 CurrentProduct = product,
