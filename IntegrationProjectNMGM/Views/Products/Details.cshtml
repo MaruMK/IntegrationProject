@@ -1,4 +1,6 @@
 ﻿@model IntegrationProjectNMGM.Models.ProductDetails
+<!--The controller passes a ProductDetails object which stores the current Product, all its images and all its reviews.-->
+<!--So to access Images, you would do model=> model.Images-->
 
 @{
     ViewBag.Title = "Details";
@@ -64,4 +66,7 @@
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.CurrentProduct.ProductId }) |
     @Html.ActionLink("Back to List", "Index")
+    @Html.Partial("~/Views/Shared/Review.cshtml", Model.Reviews)
+
+
 </p>

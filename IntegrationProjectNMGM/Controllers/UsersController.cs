@@ -139,13 +139,20 @@ namespace IntegrationProjectNMGM.Controllers
             string userName = user.Username;
             string passWord = user.Password;
 
-            /*var query = from User in db.Users
+            var query = from User in db.Users
                         where User.Username == userName
-                              && User.Password == passWord
-                        select User;*/
-            System.Diagnostics.Debug.WriteLine(user.Username);            //return RedirectToAction("Index");
+                        select User;
 
-            return View(user);
+            if (query.Count() > 0 && query.First().Password == user.Password)
+            {
+                return RedirectToAction("Index", "Home");            
+            }
+            else
+            {
+                Response.Write("<script>alert('Username or Password incorrect');</script>");
+                return View(user);
+            }
+
         }
         //=========================================================================================================
 
