@@ -199,10 +199,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\IntegrationProjectNMGM.Models.ProductDbContext.mdf" />
-    <Content Include="App_Data\IntegrationProjectNMGM.Models.ProductDbContext_log.ldf">
-      <DependentUpon>IntegrationProjectNMGM.Models.ProductDbContext.mdf</DependentUpon>
-    </Content>
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\Antlr3.Runtime.pdb" />
     <Content Include="bin\EntityFramework.dll" />
