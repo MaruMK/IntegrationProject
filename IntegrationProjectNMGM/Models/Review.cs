@@ -11,7 +11,7 @@ namespace IntegrationProjectNMGM.Models
         public string ReviewDescription { get; set; }
         [Range(1,5)]
         [DefaultValue(3)]
-        public string Rating { get; set; }
+        public int Rating { get; set; }
         [ForeignKey("Product")]
         public int ProductId { get; set; }
         public Product Product { get; set; }
