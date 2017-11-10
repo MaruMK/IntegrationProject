@@ -8,12 +8,19 @@
         draw a start for each point-->
     <br /><br />
     Do you want to leave feedback on this product? Click @Html.ActionLink("Here", "Index", "Review")
-    @foreach (var r in Model)
-    {
-        @Html.DisplayFor(modelItem => r.Rating)
-    }
-    <br />
-
+        @foreach (var r in Model)
+        {
+            <br>
+            <h3>
+                @Html.DisplayFor(modelItem => r.Rating) 🌟's
+                @for (var i = 1; i <= r.Rating; i++)
+                {
+                    @Html.Display("🌟");
+                }
+            </h3>
+            <pre>@Html.DisplayFor(modelItem => r.ReviewDescription)</pre>
+            
+        }
     <!--The viewbag will give out a list of user ratings,
         which will be displayed with page numbers
         and with username, rating and review-->
