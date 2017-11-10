@@ -139,12 +139,11 @@ namespace IntegrationProjectNMGM.Controllers
             string userName = user.Username;
             string passWord = user.Password;
 
-            var query = from User in db.Users
+            /*var query = from User in db.Users
                         where User.Username == userName
                               && User.Password == passWord
-                        select User;
-            System.Web.HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert("+user.Username+")</SCRIPT>");
-            return RedirectToAction("Index");
+                        select User;*/
+            System.Diagnostics.Debug.WriteLine(user.Username);            //return RedirectToAction("Index");
 
             return View(user);
         }
