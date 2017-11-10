@@ -12,7 +12,7 @@ namespace IntegrationProjectNMGM.Controllers
 {
     public class UsersController : Controller
     {
-        private UsersDbContext db = new UsersDbContext();
+        private ProductDbContext db = new ProductDbContext();
 
         // GET: Users
         public ActionResult Index()
@@ -46,7 +46,7 @@ namespace IntegrationProjectNMGM.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserID,Username,FName,LName,Password")] User user)
+        public ActionResult Create([Bind(Include = "UserID,Username,FName,LName,Password,Email")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace IntegrationProjectNMGM.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserID,Username,FName,LName,Password")] User user)
+        public ActionResult Edit([Bind(Include = "UserID,Username,FName,LName,Password,Email")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -143,11 +143,12 @@ namespace IntegrationProjectNMGM.Controllers
                         where User.Username == userName
                               && User.Password == passWord
                         select User;
-
+            System.Web.HttpContext.Current.Response.Write("<SCRIPT LANGUAGE=\"JavaScript\">alert("+user.Username+")</SCRIPT>");
             return RedirectToAction("Index");
 
             return View(user);
         }
         //=========================================================================================================
+
     }
 }

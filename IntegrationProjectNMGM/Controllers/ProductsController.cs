@@ -36,6 +36,13 @@ namespace IntegrationProjectNMGM.Controllers
             }
 
 
+
+            var images = from i in db.Images
+                         where i.ProductId == id
+                         select i;
+
+            ViewBag.Images = images;
+
             return View(product);
         }
 

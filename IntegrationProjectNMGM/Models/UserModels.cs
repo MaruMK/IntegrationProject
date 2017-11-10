@@ -13,10 +13,6 @@ namespace IntegrationProjectNMGM.Models
         public string FName { get; set; }
         public string LName { get; set; }
         public string Password { get; set; }
-    }
-
-    public class UsersDbContext: DbContext
-    {
-        public DbSet<User> Users { get; set; }
+        public string Email { get; set; }
     }
 }
