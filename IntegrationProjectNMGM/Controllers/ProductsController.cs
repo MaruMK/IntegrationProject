@@ -57,8 +57,20 @@ namespace IntegrationProjectNMGM.Controllers
         }
 
         // GET: Products/Create
-        public ActionResult Create(HttpPostedFileBase file)
+        public ActionResult Create()
         {
+            return View();
+        }
+            
+        
+        // POST: Products/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "ProductId,ProductName,Description,MSRP,CurrentPrice,Enabled")] Product product, HttpPostedFileBase file)
+        {
+            /********************************** IMAGE UPLOAD **********************************/
             if (file != null && file.ContentLength > 0)
                 try
                 {
@@ -75,17 +87,7 @@ namespace IntegrationProjectNMGM.Controllers
             {
                 ViewBag.Message = "You have not specified a file.";
             }
-            return View();
-        }
-            
-        
-        // POST: Products/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductId,ProductName,Description,MSRP,CurrentPrice,Enabled")] Product product)
-        {
+            /**********************************************************************************/
             if (ModelState.IsValid)
             {
                 db.Products.Add(product);
