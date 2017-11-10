@@ -186,16 +186,24 @@
     <Compile Include="Migrations\201711081919193_AddUsersTableToDb.Designer.cs">
       <DependentUpon>201711081919193_AddUsersTableToDb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711101721470_SomeUnknownChange.cs" />
+    <Compile Include="Migrations\201711101721470_SomeUnknownChange.Designer.cs">
+      <DependentUpon>201711101721470_SomeUnknownChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711101727506_ColorAddProductFields.cs" />
+    <Compile Include="Migrations\201711101727506_ColorAddProductFields.Designer.cs">
+      <DependentUpon>201711101727506_ColorAddProductFields.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\ProductAndReviews.cs" />
+    <Compile Include="Models\ProductDetails.cs" />
     <Compile Include="Models\Color.cs" />
     <Compile Include="Models\DAL.cs" />
     <Compile Include="Models\Image.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductCategories.cs" />
     <Compile Include="Models\Review.cs" />
-    <Compile Include="Models\UserModels.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -336,7 +344,6 @@
     <Content Include="Views\Products\Review.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Assets\images\" />
   </ItemGroup>
   <ItemGroup>
@@ -378,6 +385,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711081832443_AddProductIdToImageAndReview.resx">
       <DependentUpon>201711081832443_AddProductIdToImageAndReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711101721470_SomeUnknownChange.resx">
+      <DependentUpon>201711101721470_SomeUnknownChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711101727506_ColorAddProductFields.resx">
+      <DependentUpon>201711101727506_ColorAddProductFields.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
