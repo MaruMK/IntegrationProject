@@ -194,6 +194,10 @@
     <Compile Include="Migrations\201711101727506_ColorAddProductFields.Designer.cs">
       <DependentUpon>201711101727506_ColorAddProductFields.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711101833181_ChangeReviewRatingStringToInt.cs" />
+    <Compile Include="Migrations\201711101833181_ChangeReviewRatingStringToInt.Designer.cs">
+      <DependentUpon>201711101833181_ChangeReviewRatingStringToInt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\ProductDetails.cs" />
@@ -303,14 +307,18 @@
     <Content Include="Content\Images\bikeshop.jpg" />
     <Content Include="Content\Images\bikeshopowners.jpg" />
     <Content Include="Content\Images\bikeshopworker.jpg" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -326,9 +334,7 @@
     <Content Include="Views\DummyTemplates\Product.cshtml" />
     <Content Include="Views\Products\Create.cshtml" />
     <Content Include="Views\Products\Delete.cshtml" />
-    <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
-    <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Users\Create.cshtml" />
     <Content Include="Views\Users\Delete.cshtml" />
     <Content Include="Views\Users\Details.cshtml" />
@@ -336,10 +342,7 @@
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Users\Password.cshtml" />
     <Content Include="Views\Users\Login.cshtml" />
-    <Content Include="Views\Products\Create.cshtml" />
-    <Content Include="Views\Products\Delete.cshtml" />
     <Content Include="Views\Products\Details.cshtml" />
-    <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Products\Review.cshtml" />
   </ItemGroup>
@@ -391,6 +394,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711101727506_ColorAddProductFields.resx">
       <DependentUpon>201711101727506_ColorAddProductFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711101833181_ChangeReviewRatingStringToInt.resx">
+      <DependentUpon>201711101833181_ChangeReviewRatingStringToInt.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

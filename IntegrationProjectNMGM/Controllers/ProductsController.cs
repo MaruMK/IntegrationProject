@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using IntegrationProjectNMGM.Models;
+using System.IO;
 
 namespace IntegrationProjectNMGM.Controllers
 {
@@ -28,9 +29,19 @@ namespace IntegrationProjectNMGM.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Product product = db.Products.Find(id);
-            List<Review> reviews = (List<Review>) db.Reviews.Where(s => s.ProductId == id);
-            List<Image> images = (List<Image>)db.Images.Where(i => i.ProductId == id);
- 
+            List<Review> reviews = new List<Review>();
+            var r = db.Reviews.Where(s => s.ProductId == id);
+            foreach (Review re in r)
+            {
+                reviews.Add(re);
+            }
+            List<Image> images = new List<Image>();
+            var i = db.Images.Where(y => y.ProductId == id);
+            foreach (Image im in i)
+            {
+                images.Add(im);
+            }
+
             ProductDetails productDetails = new ProductDetails()
             {
                 CurrentProduct = product,
@@ -46,11 +57,28 @@ namespace IntegrationProjectNMGM.Controllers
         }
 
         // GET: Products/Create
-        public ActionResult Create()
+        public ActionResult Create(HttpPostedFileBase file)
         {
+            if (file != null && file.ContentLength > 0)
+                try
+                {
+                    string path = Path.Combine(Server.MapPath("~/Models/Images"),
+                                                Path.GetFileName(file.FileName));
+                    file.SaveAs(path);
+                    ViewBag.Messsage = "File uploaded successfully";
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.Message = "Error: " + ex.Message.ToString();
+                }
+            else
+            {
+                ViewBag.Message = "You have not specified a file.";
+            }
             return View();
         }
-
+            
+        
         // POST: Products/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
