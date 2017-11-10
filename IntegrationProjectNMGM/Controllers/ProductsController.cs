@@ -28,11 +28,12 @@ namespace IntegrationProjectNMGM.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Product product = db.Products.Find(id);
+            List<Review> reviews = new List<Review>();
+
             if (product == null)
             {
                 return HttpNotFound();
             }
-             List<Review> reviews = new List<Review>();
 
 
 

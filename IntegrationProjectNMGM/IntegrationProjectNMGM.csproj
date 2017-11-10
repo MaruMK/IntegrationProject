@@ -188,6 +188,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\ProductAndReviews.cs" />
     <Compile Include="Models\Color.cs" />
     <Compile Include="Models\DAL.cs" />
     <Compile Include="Models\Image.cs" />
