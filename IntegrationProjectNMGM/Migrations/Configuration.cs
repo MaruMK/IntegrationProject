@@ -24,14 +24,14 @@ namespace IntegrationProjectNMGM.Migrations
 
             context.Categories.AddOrUpdate(
                 p => p.CategoryId,
-                new Category { CategoryId = 1, CategoryName = "root", ParentCategoryId = 0 },
-                new Category { CategoryId = 2, CategoryName = "Bicycles", ParentCategoryId = 1 },
-                new Category { CategoryId = 3, CategoryName = "Accessories", ParentCategoryId = 1 },
-                new Category { CategoryId = 4, CategoryName = "Mountain Bikes", ParentCategoryId = 2 },
-                new Category { CategoryId = 5, CategoryName = "Road Bikes", ParentCategoryId = 2 },
-                new Category { CategoryId = 6, CategoryName = "Clothing", ParentCategoryId = 3 },
-                new Category { CategoryId = 7, CategoryName = "Protective Gear", ParentCategoryId = 3 },
-                new Category { CategoryId = 8, CategoryName = "Bike Attachements", ParentCategoryId = 3 }
+                new Category { CategoryId = 1, CategoryName = "root", ParentCategory = 0 },
+                new Category { CategoryId = 2, CategoryName = "Bicycles", ParentCategory = 1 },
+                new Category { CategoryId = 3, CategoryName = "Accessories", ParentCategory = 1 },
+                new Category { CategoryId = 4, CategoryName = "Mountain Bikes", ParentCategory = 2 },
+                new Category { CategoryId = 5, CategoryName = "Road Bikes", ParentCategory = 2 },
+                new Category { CategoryId = 6, CategoryName = "Clothing", ParentCategory = 3 },
+                new Category { CategoryId = 7, CategoryName = "Protective Gear", ParentCategory = 3 },
+                new Category { CategoryId = 8, CategoryName = "Bike Attachements", ParentCategory = 3 }
             );
         }
     }
