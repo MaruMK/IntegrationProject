@@ -71,19 +71,18 @@ namespace IntegrationProjectNMGM.Controllers
         public ActionResult Create([Bind(Include = "ProductId,ProductName,Description,MSRP,CurrentPrice,Enabled")] Product product, HttpPostedFileBase file)
         {
             /********************************** IMAGE UPLOAD **********************************/
-            if (file != null)
-                if (file.ContentLength > 0)
-                    try
-                    {
-                        string path = Path.Combine(Server.MapPath("~/IntegrationProjectNMGM/Models/Images"),
-                                                    Path.GetFileName(file.FileName));
-                        file.SaveAs(path);
-                        ViewBag.Messsage = "File uploaded successfully";
-                    }
-                    catch (Exception ex)
-                    {
-                        ViewBag.Message = "Error: " + ex.Message.ToString();
-                    }
+            if (file != null && file.ContentLength > 0)
+                try
+                {
+                    string path = Path.Combine(Server.MapPath("~/IntegrationProjectNMGM/Models/Images"),
+                                                Path.GetFileName(file.FileName));
+                    file.SaveAs(path);
+                    ViewBag.Messsage = "File uploaded successfully";
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.Message = "Error: " + ex.Message.ToString();
+                }
             else
             {
                 ViewBag.Message = "You have not specified a file.";
