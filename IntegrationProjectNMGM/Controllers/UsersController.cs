@@ -145,6 +145,7 @@ namespace IntegrationProjectNMGM.Controllers
 
             if (query.Count() > 0 && query.First().Password == user.Password)
             {
+                Session["userName"] = userName;
                 return RedirectToAction("Index", "Home");            
             }
             else
