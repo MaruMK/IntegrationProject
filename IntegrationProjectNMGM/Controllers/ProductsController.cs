@@ -18,11 +18,7 @@ namespace IntegrationProjectNMGM.Controllers
         // GET: Products
         public ActionResult Index()
         {
-            var parentCategories = from x in db.Categories
-                                   where x.ParentCategory == 1
-                                   select x;
-            //return View(db.Products.ToList());
-            return View(parentCategories);
+            return View(db.Products.ToList());
         }
 
         // GET: Products/Details/5
