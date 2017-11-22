@@ -8,7 +8,7 @@ namespace IntegrationProjectNMGM.Models
 {
     public class User
     {
-        public string UserID { get; set; }
+        public int UserID { get; set; }
         public string Username { get; set; }
         public string FName { get; set; }
         public string LName { get; set; }

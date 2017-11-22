@@ -16,7 +16,7 @@ namespace IntegrationProjectNMGM.Migrations
         public override void Down()
         {
             AddColumn("dbo.Categories", "ParentCategory_CategoryId", c => c.Int());
-            DropColumn("dbo.Categories", "ParentCategory");
+            DropColumn("dbo.Categories", "ParentCategoryId");
             CreateIndex("dbo.Categories", "ParentCategory_CategoryId");
             AddForeignKey("dbo.Categories", "ParentCategory_CategoryId", "dbo.Categories", "CategoryId");
         }

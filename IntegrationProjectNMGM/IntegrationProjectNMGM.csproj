@@ -202,6 +202,10 @@
     <Compile Include="Migrations\201711221717017_AddUserManagerChangeProductParentCategory.Designer.cs">
       <DependentUpon>201711221717017_AddUserManagerChangeProductParentCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711221813052_ChangeUserUserID.cs" />
+    <Compile Include="Migrations\201711221813052_ChangeUserUserID.Designer.cs">
+      <DependentUpon>201711221813052_ChangeUserUserID.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\ProductDetails.cs" />
@@ -282,6 +286,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Models\Images\sampleBike.jpg" />
+    <Content Include="Models\Images\sampleBike2.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -404,6 +409,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711221717017_AddUserManagerChangeProductParentCategory.resx">
       <DependentUpon>201711221717017_AddUserManagerChangeProductParentCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711221813052_ChangeUserUserID.resx">
+      <DependentUpon>201711221813052_ChangeUserUserID.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
