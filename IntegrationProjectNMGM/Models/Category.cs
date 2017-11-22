@@ -9,7 +9,7 @@ namespace IntegrationProjectNMGM.Models
     {
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
-        public Category ParentCategory { get; set; }
+        public int ParentCategory { get; set; }
 
         public virtual ICollection<ProductCategories> ProductCategories { get; set; }
     }
