@@ -198,6 +198,10 @@
     <Compile Include="Migrations\201711101833181_ChangeReviewRatingStringToInt.Designer.cs">
       <DependentUpon>201711101833181_ChangeReviewRatingStringToInt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711221712216_ChangedParentCategory.cs" />
+    <Compile Include="Migrations\201711221712216_ChangedParentCategory.Designer.cs">
+      <DependentUpon>201711221712216_ChangedParentCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\ProductDetails.cs" />
@@ -397,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711101833181_ChangeReviewRatingStringToInt.resx">
       <DependentUpon>201711101833181_ChangeReviewRatingStringToInt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711221712216_ChangedParentCategory.resx">
+      <DependentUpon>201711221712216_ChangedParentCategory.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
