@@ -587,8 +587,8 @@ ol ol {
 
 .list-inline > li {
   display: inline-block;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 1px;
+  padding-left: 1px;
 }
 
 dl {
@@ -3267,7 +3267,7 @@ input[type="button"].btn-block {
 
 .dropdown-menu > li > a {
   display: block;
-  padding: 3px 20px;
+  padding: 3px 10px;
   clear: both;
   font-weight: normal;
   line-height: 1.428571429;
@@ -4243,9 +4243,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-nav > li > a {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  line-height: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 20px;
 }
 
 @media (max-width: 767px) {
@@ -4502,7 +4504,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-inverse {
   background-color: #222222;
-  border-color: #080808;
+  border: none;
 }
 
 .navbar-inverse .navbar-brand {

@@ -15,35 +15,63 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <!--From https://forums.asp.net/t/2092767.aspx -->
+    <script>
+        var clicked = false;
+        function cartPress() {
+            if (!clicked) {
+                document.getElementById("cart_partial").style.display = "";
+                document.getElementById("cart_button").style.borderTopLeftRadius = "3px"
+                document.getElementById("cart_button").style.borderTopRightRadius = "3px"
+                document.getElementById("cart_button").style.borderColor = "lightblue"
+                document.getElementById("cart_button").style.backgroundColor = "lightblue"
+            } else {
+                document.getElementById("cart_partial").style.display = "none";
+                document.getElementById("cart_button").style.border = "none"
+                document.getElementById("cart_button").style.backgroundColor = ""
+            }
+            clicked = !clicked;
+        }
+
+    </script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <!----img src="~/Content/Images/bikeshoplogo.png" alt="Logo" /-->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               
-                @Html.ActionLink("The Ultimate Bike Shop for Bike Lovers Of Quebec", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                
+
+                <div style="text-align:center">@Html.ActionLink("NMGM", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</div>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Products", "Index", "Products")</li>
-                    <li>@Html.ActionLink("About Us", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Shop", "Index", "Products")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Cycling Safety", "CyclingSafety", "Home")</li>
                     <li>@Html.ActionLink("Careers", "Careers", "Home")</li>
                     <li>@Html.ActionLink("Returns", "Returns", "Home")</li>
                     <li>@Html.ActionLink("Login", "Login", "Users")</li>
+                    <li><a id="cart_button" onclick="cartPress()">Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+
                 </ul>
             </div>
+      
         </div>
     </div>
+
     <div class="container body-content">
+        <!--Shopping Cart is here-->
+        <div id="cart_partial" style="display:none">
+            @Html.Partial("~/Views/Shared/Cart.cshtml")
+        </div>
         @RenderBody()
         <hr />
         <footer>
@@ -55,6 +83,9 @@
                 <li>@Html.ActionLink("Cycling Safety", "CyclingSafety", "Home")</li>
                 <li>@Html.ActionLink("Careers", "Careers", "Home")</li>
                 <li>@Html.ActionLink("Returns", "Returns", "Home")</li>
+                <li>@Html.ActionLink("Login", "Login", "Users")</li>
+                <li>@Html.ActionLink("Go to Cart", "Cart", "Home")</li>
+
             </ul>
         </footer>
     </div>

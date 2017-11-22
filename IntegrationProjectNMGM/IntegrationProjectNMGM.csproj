@@ -345,6 +345,7 @@
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Products\Review.cshtml" />
+    <Content Include="Views\Shared\Cart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\images\" />
