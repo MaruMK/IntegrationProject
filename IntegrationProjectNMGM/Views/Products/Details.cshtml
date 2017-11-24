@@ -1,7 +1,6 @@
 ﻿@model IntegrationProjectNMGM.Models.ProductDetails
 <!--The controller passes a ProductDetails object which stores the current Product, all its images and all its reviews.-->
-<!--So to access Images, you would do model=> model.Images-->-->
-
+<!--So to access Images, you would do model=> model.Images-->
 
 @{
     ViewBag.Title = "Details";
@@ -53,11 +52,28 @@
             @Html.DisplayFor(model => model.CurrentProduct.Enabled)
         </dd>
 
-        
+        <!--The controller passes a ProductDetails object which stores the current Product, all its images and all its reviews.-->
+        <!--So to access Images, you would do model=> model.Images-->
+        <table>
+            <tr>
+                @foreach (var image in Model.Images)
+                {
+                    <td><img src="@image.ImagePath" alt="@image.ImageName" style="width:150px;height:150px;"/></td>
+                }
+                <!-- Sample Image path -->
+                <!--<td><img src="~/Models/Images/sampleBike.jpg" style="width:150px;height:150px;" /></td>
+                <td><img src="~/Models/Images/sampleBike2.jpg" style="width:150px;height:150px;" /></td> -->
+            </tr>
+        </table>
+
+
 
     </dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.CurrentProduct.ProductId }) |
     @Html.ActionLink("Back to List", "Index")
+    @Html.Partial("~/Views/Shared/Review.cshtml", Model.Reviews)
+
+
 </p>

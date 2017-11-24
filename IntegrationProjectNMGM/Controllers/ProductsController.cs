@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using IntegrationProjectNMGM.Models;
+using System.IO;
 
 namespace IntegrationProjectNMGM.Controllers
 {
@@ -60,14 +61,33 @@ namespace IntegrationProjectNMGM.Controllers
         {
             return View();
         }
-
+            
+        
         // POST: Products/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductId,ProductName,Description,MSRP,CurrentPrice,Enabled")] Product product)
+        public ActionResult Create([Bind(Include = "ProductId,ProductName,Description,MSRP,CurrentPrice,Enabled")] Product product, HttpPostedFileBase file)
         {
+            /********************************** IMAGE UPLOAD **********************************/
+            if (file != null && file.ContentLength > 0)
+                try
+                {
+                    string path = Path.Combine(Server.MapPath("~/IntegrationProjectNMGM/Models/Images"),
+                                                Path.GetFileName(file.FileName));
+                    file.SaveAs(path);
+                    ViewBag.Messsage = "File uploaded successfully";
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.Message = "Error: " + ex.Message.ToString();
+                }
+            else
+            {
+                ViewBag.Message = "You have not specified a file.";
+            }
+            /**********************************************************************************/
             if (ModelState.IsValid)
             {
                 db.Products.Add(product);

@@ -194,6 +194,18 @@
     <Compile Include="Migrations\201711101727506_ColorAddProductFields.Designer.cs">
       <DependentUpon>201711101727506_ColorAddProductFields.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711101833181_ChangeReviewRatingStringToInt.cs" />
+    <Compile Include="Migrations\201711101833181_ChangeReviewRatingStringToInt.Designer.cs">
+      <DependentUpon>201711101833181_ChangeReviewRatingStringToInt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711221717017_AddUserManagerChangeProductParentCategory.cs" />
+    <Compile Include="Migrations\201711221717017_AddUserManagerChangeProductParentCategory.Designer.cs">
+      <DependentUpon>201711221717017_AddUserManagerChangeProductParentCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711221813052_ChangeUserUserID.cs" />
+    <Compile Include="Migrations\201711221813052_ChangeUserUserID.Designer.cs">
+      <DependentUpon>201711221813052_ChangeUserUserID.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\ProductDetails.cs" />
@@ -274,6 +286,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Models\Images\sampleBike.jpg" />
+    <Content Include="Models\Images\sampleBike2.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -331,7 +344,6 @@
     <Content Include="Views\Products\Create.cshtml" />
     <Content Include="Views\Products\Delete.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
-    <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Users\Create.cshtml" />
     <Content Include="Views\Users\Delete.cshtml" />
     <Content Include="Views\Users\Details.cshtml" />
@@ -339,10 +351,7 @@
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Users\Password.cshtml" />
     <Content Include="Views\Users\Login.cshtml" />
-    <Content Include="Views\Products\Create.cshtml" />
-    <Content Include="Views\Products\Delete.cshtml" />
     <Content Include="Views\Products\Details.cshtml" />
-    <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Products\Review.cshtml" />
   </ItemGroup>
@@ -394,6 +403,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711101727506_ColorAddProductFields.resx">
       <DependentUpon>201711101727506_ColorAddProductFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711101833181_ChangeReviewRatingStringToInt.resx">
+      <DependentUpon>201711101833181_ChangeReviewRatingStringToInt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711221717017_AddUserManagerChangeProductParentCategory.resx">
+      <DependentUpon>201711221717017_AddUserManagerChangeProductParentCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711221813052_ChangeUserUserID.resx">
+      <DependentUpon>201711221813052_ChangeUserUserID.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
