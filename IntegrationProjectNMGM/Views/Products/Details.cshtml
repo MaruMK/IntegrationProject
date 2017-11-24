@@ -20,6 +20,9 @@
                 @Html.DisplayFor(model => model.CurrentProduct.Description)
             </dd>
             <div class="prices">
+                <dt class="prodMSRPLabel">
+                    @Html.DisplayNameFor(model => model.CurrentProduct.MSRP)
+                </dt>
                 <dd class="prodMSRP">
                     @Html.DisplayFor(model => model.CurrentProduct.MSRP)
                 </dd>

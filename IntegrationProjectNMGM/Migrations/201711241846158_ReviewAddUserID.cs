@@ -3,16 +3,16 @@ namespace IntegrationProjectNMGM.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class ReviewAddUserId : DbMigration
+    public partial class ReviewAddUserID : DbMigration
     {
         public override void Up()
         {
-            AddColumn("dbo.Reviews", "UserId", c => c.Int(nullable: false));
+            AddColumn("dbo.Reviews", "UserID", c => c.Int(nullable: false));
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Reviews", "UserId");
+            DropColumn("dbo.Reviews", "UserID");
         }
     }
 }

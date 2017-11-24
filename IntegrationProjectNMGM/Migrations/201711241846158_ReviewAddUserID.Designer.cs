@@ -7,13 +7,13 @@ namespace IntegrationProjectNMGM.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class ReviewAddUserId : IMigrationMetadata
+    public sealed partial class ReviewAddUserID : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ReviewAddUserId));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ReviewAddUserID));
         
         string IMigrationMetadata.Id
         {
-            get { return "201711241805163_ReviewAddUserId"; }
+            get { return "201711241846158_ReviewAddUserID"; }
         }
         
         string IMigrationMetadata.Source

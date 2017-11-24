@@ -186,10 +186,6 @@
     <Compile Include="Migrations\201711081919193_AddUsersTableToDb.Designer.cs">
       <DependentUpon>201711081919193_AddUsersTableToDb.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201711101701319_AddUserDbSet.cs" />
-    <Compile Include="Migrations\201711101701319_AddUserDbSet.Designer.cs">
-      <DependentUpon>201711101701319_AddUserDbSet.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201711101721470_SomeUnknownChange.cs" />
     <Compile Include="Migrations\201711101721470_SomeUnknownChange.Designer.cs">
       <DependentUpon>201711101721470_SomeUnknownChange.cs</DependentUpon>
@@ -214,9 +210,13 @@
     <Compile Include="Migrations\201711221813052_ChangeUserUserID.Designer.cs">
       <DependentUpon>201711221813052_ChangeUserUserID.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201711241805163_ReviewAddUserId.cs" />
-    <Compile Include="Migrations\201711241805163_ReviewAddUserId.Designer.cs">
-      <DependentUpon>201711241805163_ReviewAddUserId.cs</DependentUpon>
+    <Compile Include="Migrations\201711101701319_AddUserDbSet.cs" />
+    <Compile Include="Migrations\201711101701319_AddUserDbSet.Designer.cs">
+      <DependentUpon>201711101701319_AddUserDbSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711241846158_ReviewAddUserID.cs" />
+    <Compile Include="Migrations\201711241846158_ReviewAddUserID.Designer.cs">
+      <DependentUpon>201711241846158_ReviewAddUserID.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
@@ -379,7 +379,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\images\" />
-    <Folder Include="Models\Images\" />
+    <Folder Include="Migrations\backups\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -421,9 +421,6 @@
     <EmbeddedResource Include="Migrations\201711081832443_AddProductIdToImageAndReview.resx">
       <DependentUpon>201711081832443_AddProductIdToImageAndReview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711101701319_AddUserDbSet.resx">
-      <DependentUpon>201711101701319_AddUserDbSet.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711101721470_SomeUnknownChange.resx">
       <DependentUpon>201711101721470_SomeUnknownChange.cs</DependentUpon>
     </EmbeddedResource>
@@ -442,8 +439,11 @@
     <EmbeddedResource Include="Migrations\201711221813052_ChangeUserUserID.resx">
       <DependentUpon>201711221813052_ChangeUserUserID.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711241805163_ReviewAddUserId.resx">
-      <DependentUpon>201711241805163_ReviewAddUserId.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711101701319_AddUserDbSet.resx">
+      <DependentUpon>201711101701319_AddUserDbSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711241846158_ReviewAddUserID.resx">
+      <DependentUpon>201711241846158_ReviewAddUserID.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
