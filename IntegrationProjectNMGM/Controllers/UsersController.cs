@@ -17,7 +17,14 @@ namespace IntegrationProjectNMGM.Controllers
         // GET: Users
         public ActionResult Index()
         {
-            return View(db.Users.ToList());
+            if(!String.IsNullOrEmpty((String) Session["username"])){
+                if((bool)Session["manager"])
+                    return View(db.Users.ToList());
+                else
+                    return RedirectToAction("Index", "Home");
+            }
+            else
+                return RedirectToAction("Login");
         }
 
         // GET: Users/Details/5
@@ -27,7 +34,7 @@ namespace IntegrationProjectNMGM.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            User user = db.Users.Find(id);
+            User user = db.Users.Find(int.Parse(id));
             if (user == null)
             {
                 return HttpNotFound();
@@ -65,7 +72,7 @@ namespace IntegrationProjectNMGM.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            User user = db.Users.Find(id);
+            User user = db.Users.Find(int.Parse(id));
             if (user == null)
             {
                 return HttpNotFound();
@@ -145,7 +152,9 @@ namespace IntegrationProjectNMGM.Controllers
 
             if (query.Count() > 0 && query.First().Password == user.Password)
             {
+                Session["id"] = query.First().UserID;
                 Session["userName"] = userName;
+                Session["manager"] = query.First().Manager;
                 return RedirectToAction("Index", "Home");            
             }
             else
@@ -161,7 +170,7 @@ namespace IntegrationProjectNMGM.Controllers
         // GET: Users/Logoff
         public ActionResult Logoff()
         {
-            Session["username"] = null;
+            Session.Abandon();
             return View();
         }
         //=========================================================================================================
@@ -176,24 +185,24 @@ namespace IntegrationProjectNMGM.Controllers
         // POST: Users/Login
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Forgot([Bind(Include = "Username,Password")] User user)
+        public ActionResult Forgot([Bind(Include = "Email,LName")] User user)
         {
-            string userName = user.Username;
-            string passWord = user.Password;
+            string email = user.Email;
+            string lname = user.LName;
 
             var query = from User in db.Users
-                        where User.Username == userName
+                        where User.Email == email
                         select User;
 
-            if (query.Count() > 0 && query.First().Password == user.Password)
+            if (query.Count() > 0 && query.First().LName == lname)
             {
-                Session["userName"] = userName;
-                return RedirectToAction("Index", "Home");
+                Response.Write("<script>alert('Password is: "+query.First().Password+"');</script>");
+                return View();
             }
             else
             {
-                Response.Write("<script>alert('Username or Password incorrect');</script>");
-                return View(user);
+                Response.Write("<script>alert('Account doesn't exist or last name doesn't correspond');</script>");
+                return View();
             }
 
         }
