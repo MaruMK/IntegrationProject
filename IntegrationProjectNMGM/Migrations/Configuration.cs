@@ -24,8 +24,8 @@ namespace IntegrationProjectNMGM.Migrations
 
             context.Images.AddOrUpdate(
                p => p.ImageId,
-               new Image { ImageId = 1, ImageName = "bikeImg1", ImagePath = "../../Content/Images/sampleBike.jpg", ProductId = 1 },
-               new Image { ImageId = 2, ImageName = "bikeImg2", ImagePath = "../../Content/Images/sampleBike2.jpg", ProductId = 1 }
+               new Image { ImageId = 1, ImageName = "bikeImg1", ImagePath = "../../Content/Images/Products/sampleBike.jpg", ProductId = 1 },
+               new Image { ImageId = 2, ImageName = "bikeImg2", ImagePath = "../../Content/Images/Products/sampleBike2.jpg", ProductId = 1 }
              );
         }
     }
