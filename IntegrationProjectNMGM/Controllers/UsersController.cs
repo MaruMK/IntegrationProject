@@ -145,7 +145,50 @@ namespace IntegrationProjectNMGM.Controllers
 
             if (query.Count() > 0 && query.First().Password == user.Password)
             {
+                Session["userName"] = userName;
                 return RedirectToAction("Index", "Home");            
+            }
+            else
+            {
+                Response.Write("<script>alert('Username or Password incorrect');</script>");
+                return View(user);
+            }
+
+        }
+        //=========================================================================================================
+
+        //=========================================================================================================
+        // GET: Users/Logoff
+        public ActionResult Logoff()
+        {
+            Session["username"] = null;
+            return View();
+        }
+        //=========================================================================================================
+
+        //=========================================================================================================
+        // GET: Users/Login
+        public ActionResult Forgot()
+        {
+            return View();
+        }
+
+        // POST: Users/Login
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Forgot([Bind(Include = "Username,Password")] User user)
+        {
+            string userName = user.Username;
+            string passWord = user.Password;
+
+            var query = from User in db.Users
+                        where User.Username == userName
+                        select User;
+
+            if (query.Count() > 0 && query.First().Password == user.Password)
+            {
+                Session["userName"] = userName;
+                return RedirectToAction("Index", "Home");
             }
             else
             {

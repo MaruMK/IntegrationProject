@@ -23,7 +23,17 @@ textarea {
     max-width: 280px;
 }
 
-/* Set placement for footer items*/
+/* GABRIEL: Set placement for footer items*/
 .footer a{
     text-align: right;
+}
+
+/* GABRIEL: Partial shopping cart style*/
+.partialCart{
+    background-color: lightblue;
+    border-color: lightblue;
+    border-radius: 3px;
+    margin-bottom:60px;
+    margin-top:0px;
+    padding:10px;
 }
