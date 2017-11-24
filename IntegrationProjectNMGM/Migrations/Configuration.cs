@@ -27,7 +27,11 @@ namespace IntegrationProjectNMGM.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-
+            //context.Categories.AddOrUpdate(
+            //    p => p.CategoryId,
+            //    new Models.Category { CategoryId = 0, CategoryName = "root", ParentCategory = null },
+            //    new Models.Category { CategoryId = 1, CategoryName = "Bicycle", ParentCategory = new Models.Category { CategoryId = 0, CategoryName = "root", ParentCategory = null } }
+            //    );
         }
     }
 }
