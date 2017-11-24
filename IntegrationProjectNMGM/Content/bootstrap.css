@@ -4248,6 +4248,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
     padding-left: 5px;
     padding-right: 5px;
     line-height: 20px;
+    border-left-color:white;
 }
 
 @media (max-width: 767px) {
@@ -4281,10 +4282,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
   .navbar-nav > li {
     float: left;
   }
-  .navbar-nav > li > a {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
+    .navbar-nav > li > a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 0.75vw;
+        padding-right: 0.75vw;
+    }
 }
 
 @media (min-width: 768px) {

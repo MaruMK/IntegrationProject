@@ -277,7 +277,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\Images\sampleBike.jpg" />
+    <Content Include="Content\Images\Products\sampleBike.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -349,6 +349,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\images\" />
+    <Folder Include="Models\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

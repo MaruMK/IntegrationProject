@@ -20,11 +20,17 @@
         var clicked = false;
         function cartPress() {
             if (!clicked) {
-                document.getElementById("cart_partial").style.display = "";
-                document.getElementById("cart_button").style.borderTopLeftRadius = "3px"
-                document.getElementById("cart_button").style.borderTopRightRadius = "3px"
-                document.getElementById("cart_button").style.borderColor = "lightblue"
-                document.getElementById("cart_button").style.backgroundColor = "lightblue"
+                if (window.innerWidth >= 768) {
+                    document.getElementById("cart_partial").style.display = "";
+                    document.getElementById("cart_button").style.borderTopLeftRadius = "3px"
+                    document.getElementById("cart_button").style.borderTopRightRadius = "3px"
+                    document.getElementById("cart_button").style.borderColor = "lightblue"
+                    document.getElementById("cart_button").style.backgroundColor = "lightblue"
+                } else {
+                    var url = '@Url.Action("Cart", "HomeController")';
+                    // do something with the url client side variable, for example redirect
+                    window.location.href = url;
+                }
             } else {
                 document.getElementById("cart_partial").style.display = "none";
                 document.getElementById("cart_button").style.border = "none"
