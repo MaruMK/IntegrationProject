@@ -38,13 +38,13 @@
                     <li>@Html.ActionLink("Cycling Safety", "CyclingSafety", "Home")</li>
                     <li>@Html.ActionLink("Careers", "Careers", "Home")</li>
                     <li>@Html.ActionLink("Returns", "Returns", "Home")</li>
-                    <li>@if (Session["username"].ToString() == "")
+                    <li>@if (String.IsNullOrEmpty((String)Session["userName"]))
                         {
                             @Html.ActionLink("Login", "Login", "Users");
                         }
                         else
                         {
-                            @Html.ActionLink("Logout", "Login", "Users");
+                            @Html.ActionLink("Log Off", "Logoff", "Users");
                         }
                     </li>
                     

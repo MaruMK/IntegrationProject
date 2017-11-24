@@ -186,6 +186,10 @@
     <Compile Include="Migrations\201711081919193_AddUsersTableToDb.Designer.cs">
       <DependentUpon>201711081919193_AddUsersTableToDb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711101701319_AddUserDbSet.cs" />
+    <Compile Include="Migrations\201711101701319_AddUserDbSet.Designer.cs">
+      <DependentUpon>201711101701319_AddUserDbSet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201711101721470_SomeUnknownChange.cs" />
     <Compile Include="Migrations\201711101721470_SomeUnknownChange.Designer.cs">
       <DependentUpon>201711101721470_SomeUnknownChange.cs</DependentUpon>
@@ -197,6 +201,10 @@
     <Compile Include="Migrations\201711101833181_ChangeReviewRatingStringToInt.cs" />
     <Compile Include="Migrations\201711101833181_ChangeReviewRatingStringToInt.Designer.cs">
       <DependentUpon>201711101833181_ChangeReviewRatingStringToInt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711221712216_ChangedParentCategory.cs" />
+    <Compile Include="Migrations\201711221712216_ChangedParentCategory.Designer.cs">
+      <DependentUpon>201711221712216_ChangedParentCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201711221717017_AddUserManagerChangeProductParentCategory.cs" />
     <Compile Include="Migrations\201711221717017_AddUserManagerChangeProductParentCategory.Designer.cs">
@@ -219,6 +227,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\IntegrationProjectNMGM.Models.ProductDbContext%28backup%29.mdf" />
+    <Content Include="App_Data\IntegrationProjectNMGM.Models.ProductDbContext%28backup%29_log.ldf">
+      <DependentUpon>IntegrationProjectNMGM.Models.ProductDbContext%28backup%29.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\IntegrationProjectNMGM.Models.ProductDbContext.mdf" />
+    <Content Include="App_Data\IntegrationProjectNMGM.Models.ProductDbContext_log.ldf">
+      <DependentUpon>IntegrationProjectNMGM.Models.ProductDbContext.mdf</DependentUpon>
+    </Content>
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\Antlr3.Runtime.pdb" />
     <Content Include="bin\EntityFramework.dll" />
@@ -354,6 +370,8 @@
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Products\Review.cshtml" />
+    <Content Include="Views\Users\Logoff.cshtml" />
+    <Content Include="Views\Users\Forgot.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\images\" />
@@ -398,6 +416,9 @@
     <EmbeddedResource Include="Migrations\201711081832443_AddProductIdToImageAndReview.resx">
       <DependentUpon>201711081832443_AddProductIdToImageAndReview.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711101701319_AddUserDbSet.resx">
+      <DependentUpon>201711101701319_AddUserDbSet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711101721470_SomeUnknownChange.resx">
       <DependentUpon>201711101721470_SomeUnknownChange.cs</DependentUpon>
     </EmbeddedResource>
@@ -406,6 +427,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711101833181_ChangeReviewRatingStringToInt.resx">
       <DependentUpon>201711101833181_ChangeReviewRatingStringToInt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711221712216_ChangedParentCategory.resx">
+      <DependentUpon>201711221712216_ChangedParentCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711221717017_AddUserManagerChangeProductParentCategory.resx">
       <DependentUpon>201711221717017_AddUserManagerChangeProductParentCategory.cs</DependentUpon>
