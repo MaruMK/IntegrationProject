@@ -21,6 +21,12 @@ namespace IntegrationProjectNMGM.Migrations
                new Review { ReviewId = 2, Rating = 4, ProductId = 1, ReviewDescription = "I like it!!!" },
                new Review { ReviewId = 3, Rating = 5, ProductId = 1, ReviewDescription = "Problem: grandma is stuck" }
              );
+
+            context.Images.AddOrUpdate(
+               p => p.ImageId,
+               new Image { ImageId = 1, ImageName = "bikeImg1", ImagePath = "../../Models/Images/sampleBike.jpg", ProductId = 1 },
+               new Image { ImageId = 2, ImageName = "bikeImg2", ImagePath = "../../Models/Images/sampleBike2.jpg", ProductId = 1 }
+             );
         }
     }
 }

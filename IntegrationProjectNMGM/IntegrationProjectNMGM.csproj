@@ -206,6 +206,10 @@
     <Compile Include="Migrations\201711221813052_ChangeUserUserID.Designer.cs">
       <DependentUpon>201711221813052_ChangeUserUserID.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711241805163_ReviewAddUserId.cs" />
+    <Compile Include="Migrations\201711241805163_ReviewAddUserId.Designer.cs">
+      <DependentUpon>201711241805163_ReviewAddUserId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\ProductDetails.cs" />
@@ -412,6 +416,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711221813052_ChangeUserUserID.resx">
       <DependentUpon>201711221813052_ChangeUserUserID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711241805163_ReviewAddUserId.resx">
+      <DependentUpon>201711241805163_ReviewAddUserId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

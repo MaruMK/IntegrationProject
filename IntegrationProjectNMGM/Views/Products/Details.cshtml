@@ -12,45 +12,28 @@
     <h4>Product</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.CurrentProduct.ProductName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CurrentProduct.ProductName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CurrentProduct.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CurrentProduct.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CurrentProduct.MSRP)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CurrentProduct.MSRP)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CurrentProduct.CurrentPrice)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CurrentProduct.CurrentPrice)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CurrentProduct.Enabled)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CurrentProduct.Enabled)
-        </dd>
+        <div class="wrapper">
+            <dd class="prodName">
+                @Html.DisplayFor(model => model.CurrentProduct.ProductName)
+            </dd>
+            <dd class="prodDesc">
+                @Html.DisplayFor(model => model.CurrentProduct.Description)
+            </dd>
+            <div class="prices">
+                <dd class="prodMSRP">
+                    @Html.DisplayFor(model => model.CurrentProduct.MSRP)
+                </dd>
+                <dd class="prodCurrentPrice">
+                    @Html.DisplayFor(model => model.CurrentProduct.CurrentPrice)
+                </dd>
+            </div>
+            <dt class="prodEnabledLabel">
+                @Html.DisplayNameFor(model => model.CurrentProduct.Enabled)
+            </dt>
+            <dd class="prodEnabled">
+                @Html.DisplayFor(model => model.CurrentProduct.Enabled)
+            </dd>
+        </div>
 
         <!--The controller passes a ProductDetails object which stores the current Product, all its images and all its reviews.-->
         <!--So to access Images, you would do model=> model.Images-->
