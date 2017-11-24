@@ -148,6 +148,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccessoriesController.cs" />
+    <Compile Include="Controllers\BikesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
@@ -208,6 +210,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\IntegrationProjectNMGMContext.cs" />
     <Compile Include="Models\ProductDetails.cs" />
     <Compile Include="Models\Color.cs" />
     <Compile Include="Models\DAL.cs" />
@@ -354,6 +357,16 @@
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Products\Review.cshtml" />
+    <Content Include="Views\Bikes\Create.cshtml" />
+    <Content Include="Views\Bikes\Delete.cshtml" />
+    <Content Include="Views\Bikes\Details.cshtml" />
+    <Content Include="Views\Bikes\Edit.cshtml" />
+    <Content Include="Views\Bikes\Index.cshtml" />
+    <Content Include="Views\Accessories\Create.cshtml" />
+    <Content Include="Views\Accessories\Delete.cshtml" />
+    <Content Include="Views\Accessories\Details.cshtml" />
+    <Content Include="Views\Accessories\Edit.cshtml" />
+    <Content Include="Views\Accessories\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\images\" />

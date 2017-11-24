@@ -33,11 +33,17 @@ namespace IntegrationProjectNMGM.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-            //context.Categories.AddOrUpdate(
-            //    p => p.CategoryId,
-            //    new Models.Category { CategoryId = 0, CategoryName = "root", ParentCategory = null },
-            //    new Models.Category { CategoryId = 1, CategoryName = "Bicycle", ParentCategory = new Models.Category { CategoryId = 0, CategoryName = "root", ParentCategory = null } }
-            //    );
+            context.Categories.AddOrUpdate(
+                p => p.CategoryId,
+                new Models.Category { CategoryId = 1, CategoryName = "root", ParentCategoryId = 0 },
+                new Models.Category { CategoryId = 2, CategoryName = "Bicycles", ParentCategoryId = 1 },
+                new Models.Category { CategoryId = 3, CategoryName = "Accessories", ParentCategoryId = 1 },
+                new Models.Category { CategoryId = 4, CategoryName = "Mountain Bikes", ParentCategoryId = 2 },
+                new Models.Category { CategoryId = 5, CategoryName = "Road Bikes", ParentCategoryId = 2 },
+                new Models.Category { CategoryId = 6, CategoryName = "Clothing", ParentCategoryId = 3 },
+                new Models.Category { CategoryId = 7, CategoryName = "Protective Gear", ParentCategoryId = 3 },
+                new Models.Category { CategoryId = 8, CategoryName = "Attachements", ParentCategoryId = 3 }
+                );
         }
     }
 }
