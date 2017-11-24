@@ -200,6 +200,10 @@
     <Compile Include="Migrations\201711101833181_ChangeReviewRatingStringToInt.Designer.cs">
       <DependentUpon>201711101833181_ChangeReviewRatingStringToInt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711221712216_ChangedParentCategory.cs" />
+    <Compile Include="Migrations\201711221712216_ChangedParentCategory.Designer.cs">
+      <DependentUpon>201711221712216_ChangedParentCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201711221717017_AddUserManagerChangeProductParentCategory.cs" />
     <Compile Include="Migrations\201711221717017_AddUserManagerChangeProductParentCategory.Designer.cs">
       <DependentUpon>201711221717017_AddUserManagerChangeProductParentCategory.cs</DependentUpon>
@@ -207,6 +211,14 @@
     <Compile Include="Migrations\201711221813052_ChangeUserUserID.cs" />
     <Compile Include="Migrations\201711221813052_ChangeUserUserID.Designer.cs">
       <DependentUpon>201711221813052_ChangeUserUserID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711101701319_AddUserDbSet.cs" />
+    <Compile Include="Migrations\201711101701319_AddUserDbSet.Designer.cs">
+      <DependentUpon>201711101701319_AddUserDbSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711241846158_ReviewAddUserID.cs" />
+    <Compile Include="Migrations\201711241846158_ReviewAddUserID.Designer.cs">
+      <DependentUpon>201711241846158_ReviewAddUserID.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
@@ -222,6 +234,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\IntegrationProjectNMGM.Models.ProductDbContext%28backup%29.mdf" />
+    <Content Include="App_Data\IntegrationProjectNMGM.Models.ProductDbContext%28backup%29_log.ldf">
+      <DependentUpon>IntegrationProjectNMGM.Models.ProductDbContext%28backup%29.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\IntegrationProjectNMGM.Models.ProductDbContext.mdf" />
+    <Content Include="App_Data\IntegrationProjectNMGM.Models.ProductDbContext_log.ldf">
+      <DependentUpon>IntegrationProjectNMGM.Models.ProductDbContext.mdf</DependentUpon>
+    </Content>
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\Antlr3.Runtime.pdb" />
     <Content Include="bin\EntityFramework.dll" />
@@ -288,8 +308,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\Images\sampleBike.jpg" />
-    <Content Include="Models\Images\sampleBike2.jpg" />
+    <Content Include="Content\Images\Products\sampleBike.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -357,6 +376,9 @@
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Products\Review.cshtml" />
+    <Content Include="Views\Users\Logoff.cshtml" />
+    <Content Include="Views\Users\Forgot.cshtml" />
+    <Content Include="Views\Shared\Cart.cshtml" />
     <Content Include="Views\Bikes\Create.cshtml" />
     <Content Include="Views\Bikes\Delete.cshtml" />
     <Content Include="Views\Bikes\Details.cshtml" />
@@ -370,6 +392,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\images\" />
+    <Folder Include="Migrations\backups\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -420,11 +443,20 @@
     <EmbeddedResource Include="Migrations\201711101833181_ChangeReviewRatingStringToInt.resx">
       <DependentUpon>201711101833181_ChangeReviewRatingStringToInt.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711221712216_ChangedParentCategory.resx">
+      <DependentUpon>201711221712216_ChangedParentCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711221717017_AddUserManagerChangeProductParentCategory.resx">
       <DependentUpon>201711221717017_AddUserManagerChangeProductParentCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711221813052_ChangeUserUserID.resx">
       <DependentUpon>201711221813052_ChangeUserUserID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711101701319_AddUserDbSet.resx">
+      <DependentUpon>201711101701319_AddUserDbSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711241846158_ReviewAddUserID.resx">
+      <DependentUpon>201711241846158_ReviewAddUserID.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

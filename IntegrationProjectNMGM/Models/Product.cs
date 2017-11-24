@@ -12,7 +12,9 @@ namespace IntegrationProjectNMGM.Models
         public int ProductId { get; set; }
         public string ProductName { get; set; }
         public string Description { get; set; }
+        [Display(Name ="List Price")]
         public double MSRP { get; set; }
+        [Display(Name ="Current Price")]
         public double CurrentPrice { get; set; }
         public bool Enabled { get; set; }
 

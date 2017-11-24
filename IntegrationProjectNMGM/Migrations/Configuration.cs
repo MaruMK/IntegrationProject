@@ -17,11 +17,10 @@ namespace IntegrationProjectNMGM.Migrations
         {
             context.Reviews.AddOrUpdate(
                p => p.ReviewId,
-               new Review { ReviewId = 1, Rating = 1, ProductId = 1, ReviewDescription = "Product 1 is kinda useless" },
-               new Review { ReviewId = 2, Rating = 4, ProductId = 1, ReviewDescription = "I like it!!!" },
-               new Review { ReviewId = 3, Rating = 5, ProductId = 1, ReviewDescription = "Problem: grandma is stuck" }
+               new Review { UserID = 1, Rating = 1, ProductId = 1, ReviewDescription = "Product 1 is kinda useless"},
+               new Review { UserID = 1, Rating = 4, ProductId = 1, ReviewDescription = "I like it!!!"},
+               new Review { UserID = 1, Rating = 5, ProductId = 1, ReviewDescription = "Problem: grandma is stuck"}
              );
-            //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
