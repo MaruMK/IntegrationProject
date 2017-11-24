@@ -7,15 +7,14 @@
     <!--Get a viewbag with the product's rating.
         draw a start for each point-->
     <br /><br />
-    Do you want to leave feedback on this product? Click @Html.ActionLink("Here", "Index", "Review")
+    Do you want to leave feedback on this product? Click @Html.ActionLink("Here", "Review", new { id = @Model.First().ProductId })
         @foreach (var r in Model)
         {
             <br>
             <h3>
-                @Html.DisplayFor(modelItem => r.Rating) 🌟's
                 @for (var i = 1; i <= r.Rating; i++)
                 {
-                    @Html.Display("🌟");
+                    <b>🌟</b>
                 }
             </h3>
             <pre>@Html.DisplayFor(modelItem => r.ReviewDescription)</pre>

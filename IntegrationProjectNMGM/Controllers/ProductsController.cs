@@ -99,12 +99,30 @@ namespace IntegrationProjectNMGM.Controllers
             return View(product);
         }
 
-        // GET: Products/Create
+        // GET: Reviews/Create
         public ActionResult Review(int? id)
-        {
-            if (id == null)
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        {   
+            if (id == null || db.Products.Where(p => p.ProductId == id).Count() == 0)
+                return RedirectToAction("Index");
+            Session["Review"] = id;
+            Review d = new Review();
+            d.ProductId = (int) id;
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Review([Bind(Include = "ReviewId,ReviewDescrtion,Rating,ProductId")] Review review, HttpPostedFileBase file)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Reviews.Add(review);
+
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(product);
         }
 
 
