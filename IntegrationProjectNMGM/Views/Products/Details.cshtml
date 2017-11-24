@@ -54,12 +54,19 @@
 
         <!--The controller passes a ProductDetails object which stores the current Product, all its images and all its reviews.-->
         <!--So to access Images, you would do model=> model.Images-->
-        @foreach (var image in Model.Images)
-        {
-            <li><img src="@image.ImagePath" alt="@image.ImageName" /></li>
-        }
-        <!-- Sample Image path -->
-        <!-- <img src="~/Models/Images/sampleBike.jpg" />-->
+        <table>
+            <tr>
+                @foreach (var image in Model.Images)
+                {
+                    <td><img src="@image.ImagePath" alt="@image.ImageName" style="width:150px;height:150px;"/></td>
+                }
+                <!-- Sample Image path -->
+                <!--<td><img src="~/Models/Images/sampleBike.jpg" style="width:150px;height:150px;" /></td>
+                <td><img src="~/Models/Images/sampleBike2.jpg" style="width:150px;height:150px;" /></td> -->
+            </tr>
+        </table>
+
+
 
     </dl>
 </div>

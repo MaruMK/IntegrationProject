@@ -66,6 +66,15 @@
                     <li>@Html.ActionLink("Returns", "Returns", "Home")</li>
                     <li>@Html.ActionLink("Login", "Login", "Users")</li>
                     <li><a id="cart_button" onclick="cartPress()">Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                    li>@if (Session["username"].ToString() == "")
+                    {
+                    @Html.ActionLink("Login", "Login", "Users");
+                    }
+                    else
+                    {
+                    @Html.ActionLink("Logout", "Login", "Users");
+                    }
+                    </li>
 
                 </ul>
             </div>

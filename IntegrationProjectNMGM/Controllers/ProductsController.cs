@@ -74,7 +74,7 @@ namespace IntegrationProjectNMGM.Controllers
             if (file != null && file.ContentLength > 0)
                 try
                 {
-                    string path = Path.Combine(Server.MapPath("~/Models/Images"),
+                    string path = Path.Combine(Server.MapPath("~/IntegrationProjectNMGM/Models/Images"),
                                                 Path.GetFileName(file.FileName));
                     file.SaveAs(path);
                     ViewBag.Messsage = "File uploaded successfully";

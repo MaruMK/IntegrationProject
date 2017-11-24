@@ -21,12 +21,23 @@ namespace IntegrationProjectNMGM.Migrations
                new Review { ReviewId = 2, Rating = 4, ProductId = 1, ReviewDescription = "I like it!!!" },
                new Review { ReviewId = 3, Rating = 5, ProductId = 1, ReviewDescription = "Problem: grandma is stuck" }
              );
+            //  This method will be called after migrating to the latest version.
 
-            context.Images.AddOrUpdate(
-               p => p.ImageId,
-               new Image { ImageId = 1, ImageName = "hi", ImagePath = "~/Content/Images/Products/sampleBike.jpg", ProductId = 1 }
-             );
-
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+            //  to avoid creating duplicate seed data. E.g.
+            //
+            //    context.People.AddOrUpdate(
+            //      p => p.FullName,
+            //      new Person { FullName = "Andrew Peters" },
+            //      new Person { FullName = "Brice Lambson" },
+            //      new Person { FullName = "Rowan Miller" }
+            //    );
+            //
+            //context.Categories.AddOrUpdate(
+            //    p => p.CategoryId,
+            //    new Models.Category { CategoryId = 0, CategoryName = "root", ParentCategory = null },
+            //    new Models.Category { CategoryId = 1, CategoryName = "Bicycle", ParentCategory = new Models.Category { CategoryId = 0, CategoryName = "root", ParentCategory = null } }
+            //    );
         }
     }
 }
