@@ -69,5 +69,11 @@ namespace IntegrationProjectNMGM.Controllers
             return View();
         }
 
+
+        public ActionResult ShowCart()
+        {
+            return PartialView("~/Views/Shared/Cart.cshtml");
+        }
+
     }
 }
