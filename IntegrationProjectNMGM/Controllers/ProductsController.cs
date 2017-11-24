@@ -18,11 +18,7 @@ namespace IntegrationProjectNMGM.Controllers
         // GET: Products
         public ActionResult Index()
         {
-            var parentCategories = from x in db.Categories
-                                   where x.ParentCategoryId == 1
-                                   select x;
-            //return View(db.Products.ToList());
-            return View(parentCategories);
+            return View(db.Products.ToList());
         }
 
         // GET: Products/Details/5
@@ -65,7 +61,7 @@ namespace IntegrationProjectNMGM.Controllers
         {
             return View();
         }
-         
+            
         
         // POST: Products/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
