@@ -43,6 +43,11 @@ namespace IntegrationProjectNMGM.Migrations
                 new Models.Category { CategoryId = 7, CategoryName = "Protective Gear", ParentCategoryId = 3 },
                 new Models.Category { CategoryId = 8, CategoryName = "Attachements", ParentCategoryId = 3 }
                 );
+            context.Images.AddOrUpdate(
+               p => p.ImageId,
+               new Image { ImageId = 1, ImageName = "bikeImg1", ImagePath = "../../Content/Images/Products/sampleBike.jpg", ProductId = 1 },
+               new Image { ImageId = 2, ImageName = "bikeImg2", ImagePath = "../../Content/Images/Products/sampleBike2.jpg", ProductId = 1 }
+             );
         }
     }
 }
