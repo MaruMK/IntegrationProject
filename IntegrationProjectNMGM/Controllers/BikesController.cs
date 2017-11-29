@@ -17,7 +17,30 @@ namespace IntegrationProjectNMGM.Controllers
         // GET: Bikes
         public ActionResult Index()
         {
-            return View(db.Categories.ToList());
+            var productCategories = from x in db.Categories
+                                    where x.ParentCategoryId == 2
+                                    select x;
+            return View(productCategories);
+            //return View(db.Categories.ToList());
+        }
+
+        public ActionResult Mountain()
+        {
+            return genericResult(4);
+        }
+
+        public ActionResult Road()
+        {
+            return genericResult(5);
+        }
+
+        private ActionResult genericResult(int? myID = null)
+        {
+            //var products = from x in db.Products
+            //                        where x.CategoryId == myID
+            //                        select x;
+                                    
+            return View(/*productCategories*/);
         }
 
         // GET: Bikes/Details/5

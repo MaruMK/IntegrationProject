@@ -20,5 +20,6 @@ namespace IntegrationProjectNMGM.Models
         }
 
         public System.Data.Entity.DbSet<IntegrationProjectNMGM.Models.Category> Categories { get; set; }
+        public System.Data.Entity.DbSet<IntegrationProjectNMGM.Models.Product> Products { get; set; }
     }
 }
