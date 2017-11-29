@@ -22,6 +22,27 @@ namespace IntegrationProjectNMGM.Migrations
                new Review { UserID = 1, Rating = 5, ProductId = 1, ReviewDescription = "Problem: grandma is stuck"}
              );
 
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+            //  to avoid creating duplicate seed data. E.g.
+            //
+            //    context.People.AddOrUpdate(
+            //      p => p.FullName,
+            //      new Person { FullName = "Andrew Peters" },
+            //      new Person { FullName = "Brice Lambson" },
+            //      new Person { FullName = "Rowan Miller" }
+            //    );
+            //
+            context.Categories.AddOrUpdate(
+                p => p.CategoryId,
+                new Models.Category { CategoryId = 1, CategoryName = "root", ParentCategoryId = 0 },
+                new Models.Category { CategoryId = 2, CategoryName = "Bicycles", ParentCategoryId = 1 },
+                new Models.Category { CategoryId = 3, CategoryName = "Accessories", ParentCategoryId = 1 },
+                new Models.Category { CategoryId = 4, CategoryName = "Mountain Bikes", ParentCategoryId = 2 },
+                new Models.Category { CategoryId = 5, CategoryName = "Road Bikes", ParentCategoryId = 2 },
+                new Models.Category { CategoryId = 6, CategoryName = "Clothing", ParentCategoryId = 3 },
+                new Models.Category { CategoryId = 7, CategoryName = "Protective Gear", ParentCategoryId = 3 },
+                new Models.Category { CategoryId = 8, CategoryName = "Attachements", ParentCategoryId = 3 }
+                );
             context.Images.AddOrUpdate(
                p => p.ImageId,
                new Image { ImageId = 1, ImageName = "bikeImg1", ImagePath = "../../Content/Images/Products/sampleBike.jpg", ProductId = 1 },

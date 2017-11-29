@@ -18,7 +18,7 @@ namespace IntegrationProjectNMGM.Controllers
         // GET: Products
         public ActionResult Index()
         {
-            return View(db.Products.ToList());
+            return View(/*db.Products.ToList()*/);
         }
 
         // GET: Products/Details/5

@@ -64,13 +64,17 @@
                     <li>@Html.ActionLink("Cycling Safety", "CyclingSafety", "Home")</li>
                     <li>@Html.ActionLink("Careers", "Careers", "Home")</li>
                     <li>@Html.ActionLink("Returns", "Returns", "Home")</li>
+                    @if (!String.IsNullOrEmpty((String)Session["username"]))
+                    {
+                        <li>@Html.ActionLink("My Account", "Details", "Users", new { id = Session["id"] }, null);</li>
+                    }
                     <li>@if(String.IsNullOrEmpty((String)Session["username"]))
                         {
                             @Html.ActionLink("Login", "Login", "Users");
                         }
                         else
                         {
-                            @Html.ActionLink("Logout", "Login", "Users");
+                            @Html.ActionLink("Log Out", "Logoff", "Users");
                         }
                     </li>
                     <li><a id="cart_button" onclick="cartPress()">Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
